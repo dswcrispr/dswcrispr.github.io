@@ -1,16 +1,16 @@
-title:              Clean Blog
-email:              your-email@example.com
-description:        A Blog Theme by Start Bootstrap
-author:             Start Bootstrap
+title:              Day_learner Blog
+email:              dswcrispr@gmail.com
+description:        A Blog for recording daily learning 
+author:             dswcrispr
 baseurl:            ""
 url:                "https://dswcrispr.github.io"
 
 # Social Profiles
-twitter_username:   SBootstrap
-github_username:    StartBootstrap
-facebook_username:  StartBootstrap
-instagram_username:  
-linkedin_username:
+twitter_username:   None
+github_username:    dswcrispr
+facebook_username:  None
+instagram_username: None 
+linkedin_username: None
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
