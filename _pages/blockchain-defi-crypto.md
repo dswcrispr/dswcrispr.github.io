@@ -1,9 +1,9 @@
 ---
-title: "Blockchain_CryptoAssets_DeFi"
-permalink: /categories/Blockchain_CryptoAssets_DeFi
+title: "Fintech, Blockchain"
+permalink: /categories/Fintech_Blockchain/
 layout: category
 author_profile: true
-taxonomy: Blockchain
+taxonomy: Fintech_Blockchain
 ---
 
-Blockchain, CryptoAssets, DeFi 관련 기록
+Blockchain, Fintech 관련 기록
