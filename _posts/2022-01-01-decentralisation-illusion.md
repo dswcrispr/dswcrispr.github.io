@@ -3,7 +3,7 @@ title:  "BIS_DeFi risks and the decentralisation illusion의 주요 내용"
 excerpt: "BIS Quarterly Reivew_2021 4Q"
 
 categories:
-  - Blockchain / DeFi
+  - Blockchain_CryptoAssets_DeFi
 tags:
   - BIS
   - DeFi
