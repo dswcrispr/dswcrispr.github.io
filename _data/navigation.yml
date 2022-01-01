@@ -1,5 +1,9 @@
 # main links
 main:
+  - title: "프로젝트"
+    url: /categories/프로젝트/
+  - title: "Finance"
+    url: /categories/finance/
   - title: "Fintech_Blockchain"
     url: /categories/Fintech_Blockchain/
   - title: "Categories"

@@ -6,4 +6,4 @@ author_profile: true
 taxonomy: Fintech_Blockchain
 ---
 
-Blockchain, Fintech 관련 기록
+Blockchain, Fintech, CryptoAssets, DeFi 관련 내용을 기록합니다.
