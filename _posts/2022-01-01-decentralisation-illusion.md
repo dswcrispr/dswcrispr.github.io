@@ -9,7 +9,6 @@ tags:
   - DeFi
   - 디파이
   - 탈중앙화
-classes: wide # 수정
 last_modified_at: 2022-01-01T08:06:00-05:00
 ---
 
