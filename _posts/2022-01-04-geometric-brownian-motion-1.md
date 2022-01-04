@@ -1,5 +1,5 @@
 ---
-title:  "Geometric Brownian Motion 시뮬레이션(이더리움(ETH) 가격에 대해)"
+title:  "Geometric Brownian Motion 시뮬레이션(이더리움(ETH)에 대해)"
 excerpt: "Geometric Brownian Motion 시리즈 2"
 
 categories:
