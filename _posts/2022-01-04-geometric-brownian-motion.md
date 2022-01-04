@@ -9,6 +9,9 @@ tags:
   - 금융수학
   - simulation
 
+use_math: true
+comments: true
+
 last_modified_at: 2022-01-04T08:06:00-05:00
 ---
 
