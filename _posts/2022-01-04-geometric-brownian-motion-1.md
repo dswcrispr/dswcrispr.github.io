@@ -106,9 +106,8 @@ plt.ylabel('ETH/USD')
 plt.show()
 ```
 
-![](https://devinlife.com/assets/images/bio-photo-keyboard-small.jpg)
+![](/dswcrispr.github.io/assets/images/eth.price.jpg)
 
-![](https://github.com/dswcrispr/dswcrispr.github.io/blob/master/images/eth_price.jpg)
 
 
 
