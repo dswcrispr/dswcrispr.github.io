@@ -146,14 +146,12 @@ $$
 S_{t} = S_{0}\textit{e}^{(\mu -\frac{1}{2}\sigma ^{2})t+\sigma \textit{W}_{t}}\;\;\;(2)\\
 $$  
 
-이더리움 가격에 대한 시뮬레이션은 위 (2)식의 변수에 값을 대입하여 $\textit{S}_{0}$  으로부터 $\textit{S}_{1}, \textit{S}_{2} ... \textit{S}_{t}$ 
+이더리움 가격에 대한 시뮬레이션은 위 (2)식의 변수에 값을 대입하여 $\textit{S}_{0}$  으로부터 $\textit{S}_{1}$, $\textit{S}_{2}$ ... $\textit{S}_{t}$ 
  값들을 계산해 나가는 과정이다.  
 
 이때 초기값($\textit{S}_{0}$)은 2020.2.7일의 이더리움 가격이며, $\mu$는 2018.1.1 ~ 2021.12.31 기간 중 이더리움 일일 수익률의 평균값, $\sigma$는 일일 수익률의 표준편차를 이용한다.  
 
-Brownian motion 항($\textit{W}_{t})$은 
-
-각 k 시점마다의 충격 $\textit{b}_{k} \sim \textit{N}(0, k)$ 의 합 즉, $\textit{W}_{t} = \sum_{k=1}^{t}\textit{b}_{k}$ 으로 주어지며, 여기에서는 이더리움의 일별 가격자료를 활용하므로 $\textit{k}$ = 1로 둔다.  
+Brownian motion 항($\textit{W}_{t})$은 각 k 시점마다의 충격 $\textit{b}_{k} \sim \textit{N}(0, k)$ 의 합 즉, $\textit{W}_{t} = \sum_{k=1}^{t}\textit{b}_{k}$ 으로 주어지며, 여기에서는 이더리움의 일별 가격자료를 활용하므로 $\textit{k}$ = 1로 둔다.  
 
 실제 계산에서는 (2)식의 $\textit{e}^{(\mu -\frac{1}{2}\sigma ^{2})t+\sigma \textit{W}_{t}}$ 부분을 drift 항($\textit{e}^{(\mu -\frac{1}{2}\sigma ^{2})}t$)과  diffusion 항($\textit{e}^{\sigma \textit{W}_{t}}$)으로 분리하여 $\textit{S}_{0}$에 곱하는 식으로 $\textit{S}_{t}$을 구한다.
 
