@@ -45,7 +45,6 @@ S_{t} = S_{0}\textit{e}^{(\mu -\frac{1}{2}\sigma ^{2})t+\sigma \textit{W}_{t}}\;
 $$  
 
 <br>
-<br>
   
 ## 2. 업비트(Upbit)로부터 이더리움 가격 data 구하기 
 
@@ -106,22 +105,7 @@ plt.ylabel('ETH/USD')
 plt.show()
 ```
 
-![](/dswcrispr.github.io/assets/images/eth.price.jpg)
+![](https://github.com/dswcrispr/dswcrispr.github.io/blob/master/assets/images/eth_price.jpg?raw=true)
 
 
-
-
-
-이 글의 제목은 {{ page.title }}이고
-마지막으로 수정된 시간은 {{ page.last_modified_at }}이다..
-$x+y = 1$
-
-$$
-  A_{m,n} = \begin{pmatrix}
-  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
-  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
-  \vdots  & \vdots  & \ddots & \vdots  \\
-  a_{m,1} & a_{m,2} & \cdots & a_{m,n}
-  \end{pmatrix}
- $$
 
