@@ -150,7 +150,7 @@ $$
 
 Brownian motion 항($W_{t}$)은 각 k 시점마다의 충격, $b_{k} \sim N(0, k)$ 의 합 즉, $W_{t} = \sum_{k=1}^{t}b_{k}$ 으로 주어지며, 여기에서는 이더리움의 일별 가격자료를 활용하므로 $k$ = 1로 둔다.  
 
-실제 계산에서는 (2)식의 $e^{(\mu -\frac{1}{2}\sigma ^{2})t+\sigma W_{t}}$ 부분을 drift 항($e^{(\mu -\frac{1}{2}\sigma ^{2})}t$)과  diffusion 항($e^{\sigma W_{t}}$)으로 분리하여 $S_{0}$에 곱하는 식으로 $S_{t}$을 구한다.
+실제 계산에서는 (2)식의 $e^{(\mu -\frac{1}{2}\sigma ^{2})t+\sigma W_{t}}$ 부분을 drift 항($e^{(\mu -\frac{1}{2}\sigma ^{2}t)}$)과  diffusion 항($e^{\sigma W_{t}}$)으로 분리하여 $S_{0}$에 곱하는 식으로 $S_{t}$을 구한다.
 <br>
 
 이제 simulation에 필요한 변수들을 아래와 같이 설정한다. 
