@@ -133,7 +133,6 @@ plt.show()
 ![](https://github.com/dswcrispr/dswcrispr.github.io/blob/master/assets/images/eth_price.jpg?raw=true)
 
 <br>
-  
 ## 3. Geometric Brownian Motion 시뮬레이션 
 
 위에서 구한 이더리움 가격 data를 바탕으로 Geometric Brownian Motion 시뮬레이션을 구현해본다.  
@@ -151,17 +150,7 @@ $$
 
 Brownian motion 항($W_{t}$)은 각 k 시점마다의 충격, $b_{k} \sim N(0, k)$ 의 합 즉, $W_{t} = \sum_{k=1}^{t}b_{k}$ 으로 주어지며, 여기에서는 이더리움의 일별 가격자료를 활용하므로 $k$ = 1로 둔다.  
 
-실제 계산에서는 (2)식의 $\textit{e}^{(\mu -\frac{1}{2}\sigma ^{2})t+\sigma \textit{W}_{t}}$ 부분을 drift 항($\textit{e}^{(\mu -\frac{1}{2}\sigma ^{2})}t$)과  diffusion 항($\textit{e}^{\sigma \textit{W}_{t}}$)으로 분리하여 $\textit{S}_{0}$에 곱하는 식으로 $\textit{S}_{t}$을 구한다.
-
-
-$\max\limits_\theta L_{\theta_0}(\theta)$, subject to $D_{KL}^{\rho_{\theta_0}}(\theta_0,\theta)\le\delta$, where $D_{KL}^\rho(\theta_1,\theta_2)=\mathbb{E}\_{s\sim\rho}[D\_{KL}(\pi\_{\theta_1}(\cdot\vert s)\mid\mid\pi\_{\theta_2}(\cdot\vert s))]$
-
-
-
-
-
-
-
+실제 계산에서는 (2)식의 $e^{(\mu -\frac{1}{2}\sigma ^{2})t+\sigma W_{t}}$ 부분을 drift 항($e^{(\mu -\frac{1}{2}\sigma ^{2})}t$)과  diffusion 항($e^{\sigma W_{t}}$)으로 분리하여 $S_{0}$에 곱하는 식으로 $S_{t}$을 구한다.
 <br>
 
 이제 simulation에 필요한 변수들을 아래와 같이 설정한다. 
@@ -231,7 +220,7 @@ class GBM:
         self.simulate()   
 ```
 
-위에서 설정한 simulation에 필요한 변수를 GBM 클래스에 대입하여 $\textit{S}_{1}$, $\textit{S}_{2}$ ... $\textit{S}_{T}$을 계산하고, 이를 그래프로 표현한다.
+위에서 설정한 simulation에 필요한 변수를 GBM 클래스에 대입하여 $S_{1}$, $S_{2}$ ... $S_{T}$을 계산하고, 이를 그래프로 표현한다.
  
 ``` python
 # simulation 결과를 저장할 비어있는 list 생성
