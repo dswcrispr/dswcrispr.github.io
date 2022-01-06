@@ -38,7 +38,7 @@ $$
 
 (1) 수식은 짧은 시간 간격 동안의 자산가격 변화가 짧은 시간 간격(dt) 동안의 평균적인 수익률(drift)과 랜덤한 충격에 의한 변동분의 합으로 나타남을 의미한다.
 
-(1) 수식에 Ito formula(다른 포스트에서 추가 설명 예정)를 적용하면 아래와 같은 Geometric Brownian motion 수식을 유도할 수 있다.
+(1) 수식에 Ito formula(다른 포스트에서 추가 설명 예정)를 적용하여 SDE(Stochastic Differential Equation)dmf 풀면 아래와 같은 수식을 유도할 수 있다.
 
 $$
 S_{t} = S_{0}\textit{e}^{(\mu -\frac{1}{2}\sigma ^{2})t+\sigma \textit{W}_{t}}\;\;\;(2)\\
@@ -144,7 +144,7 @@ $$
 S_{t} = S_{0}\textit{e}^{(\mu -\frac{1}{2}\sigma ^{2})t+\sigma \textit{W}_{t}}\;\;\;(2)\\
 $$  
 
-이더리움 가격에 대한 시뮬레이션은 위 (2)식의 변수에 값을 대입하여 ($\textit{S}_{0}$)으로부터 $\textit{S}_{t}$ 
+이더리움 가격에 대한 시뮬레이션은 위 (2)식의 변수에 값을 대입하여 ${S}_{0}$으로부터 ${S}_{1}$, ${S}_{2}$ ...  ${S}_{t}$ 
  값들을 계산해 나가는 과정이다.  
 
 이때 초기값($\textit{S}_{0}$)은 2020.2.7일의 이더리움 가격이며, $\mu$는 2018.1.1 ~ 2021.12.31 기간 중 이더리움 일일 수익률의 평균값, $\sigma$는 일일 수익률의 표준편차를 이용한다.  
@@ -152,6 +152,15 @@ $$
 Brownian motion 항($\textit{W}_{t})$은 각 k 시점마다의 충격 $\textit{b}_{k} \sim \textit{N}(0, k)$ 의 합 즉, $\textit{W}_{t} = \sum_{k=1}^{t}\textit{b}_{k}$ 으로 주어지며, 여기에서는 이더리움의 일별 가격자료를 활용하므로 $\textit{k}$ = 1로 둔다.  
 
 실제 계산에서는 (2)식의 $\textit{e}^{(\mu -\frac{1}{2}\sigma ^{2})t+\sigma \textit{W}_{t}}$ 부분을 drift 항($\textit{e}^{(\mu -\frac{1}{2}\sigma ^{2})}t$)과  diffusion 항($\textit{e}^{\sigma \textit{W}_{t}}$)으로 분리하여 $\textit{S}_{0}$에 곱하는 식으로 $\textit{S}_{t}$을 구한다.
+
+
+$\max\limits_\theta L_{\theta_0}(\theta)$, subject to $D_{KL}^{\rho_{\theta_0}}(\theta_0,\theta)\le\delta$, where $D_{KL}^\rho(\theta_1,\theta_2)=\mathbb{E}\_{s\sim\rho}[D\_{KL}(\pi\_{\theta_1}(\cdot\vert s)\mid\mid\pi\_{\theta_2}(\cdot\vert s))]$
+
+
+
+
+
+
 
 <br>
 
