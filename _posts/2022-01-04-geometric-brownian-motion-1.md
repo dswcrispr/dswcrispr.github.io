@@ -24,7 +24,7 @@ last_modified_at: 2022-01-04T08:06:00-05:00
 우선 Geometric Brownian Motion의 수식은 아래와 같다.
 
 $$
-\textit{ds} = \mu \textit{dt}+\sigma \textit{dW}\;\;\;(1)\\
+\textit{ds} = \mu S\textit{dt}+\sigma S\textit{dW}\;\;\;(1)\\
 $$
 
 $$
