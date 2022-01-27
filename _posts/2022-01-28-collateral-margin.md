@@ -1,40 +1,55 @@
 ---
-title:  "Geometric Brownian Motion 시뮬레이션(이더리움(ETH)에 대해)"
-excerpt: "Geometric Brownian Motion 시리즈 2"
+title:  "MakerDao 프로토콜에서의 Collateral Margin 계산과 시뮬레이션(이더리움(ETH), Maker(MKR)에 대해)"
+excerpt: "The decentralized financial crisis_Imperial college of London 논문 replication 시리즈3"
 
 categories:
   - 프로젝트
 tags:
-  - brownian motion
+  - defi financial crisis
   - 이더리움
   - simulation
-  - 파이썬
+  - collateral margin
 
 use_math: true
 comments: true
 
-last_modified_at: 2022-01-04T08:06:00-05:00
+last_modified_at: 2022-01-28T08:06:00-05:00
 ---
 
-이번 포스트에서는 Geometric Brownian Motion을 이용하여 이더리움의 미래 가격경로에 대한 시뮬레이션을 수행해본다.  
+이번 포스트에서는 지난 포스트의 Correlated Geometric Brownian Motion을 기반으로 MakerDao Defi 프로토콜에서의 Collateral Margin을 계산해보고 이더리움(ETH)과 메이커(MKR)의 가격경로에 따른 Margin 시뮬레이션을 수행해본다. 이는 Imperial College of London의 2020년 논문 "The decentralized financial crisis" 논문의 replication이다.  
 
 
-## 1. Geometric Browniam Motion    
+## 1. Collateral Margin 개요    
 
-우선 Geometric Brownian Motion의 수식은 아래와 같다.
+MakerDao 프로토콜에서는 이더리움(ETH)을 담보로 DAI를 대출 받을 수 있으며 일반적으로 DAI의 미달러화(USD) 가치의 1.5배의 초과 담보를 요구한다. 또한 MakerDao 프로토콜의 거버넌스 토큰인 메이커(MKR)는 동 프로토콜에서 reserve asset으로서 기능한다. 
+
+MakerDao 프로토콜의 Collateral Margin은 프로토콜 내 담보자산(ETH)의 가치와 거버넌스 토큰(MKR) 가치의 합에서 시스템 부채(발행된 DAI의 가치)를 뺀 것으로 정의할 수 있다. 
+
+이를 수식으로 표현하면 아래와 같다. 
 
 $$
-\textit{ds} = \mu S\textit{dt}+\sigma S\textit{dW}\;\;\;(1)\\
+M_{t} = \sum_{k=1}^{K}P_{k, t}Q_{k, t} + P_{r, t}Q_{r, t} - \lambda\sum_{k=1}^{K}d_{k, t}\\
 $$
 
 $$
-\cdot \textit{ds}: Change\; in\; asset\; prices\; in\; very\; short\; time\; period\\
-\cdot \textit{S}: Asset\;price\;for\;the\;initial\;period\\
-\cdot \mu: Expected\;return\;for\;the\;time\;period\;or\;the\;drift\\
-\cdot \textit{dt}: Change\;in\;time\\     
-\cdot \sigma: Volatility\; of\; asset\; price\\
-\cdot \textit{dW}: Change\;in\;Brownian\; motion\;term\\
+\cdot \ M_{t}: Collateral\; margin\; at\; time\; t\\
+\cdot \textit{k}: Each\; agent's\; Etherium\; in \; protocol\\
+\cdot \ P_{r,t}: Price\; of\;MKR\;at\;time\;t\\
+\cdot \ Q_{r,t}: Quantities\; of\;MKR\;at\;time\;t\\
+\cdot \ d_{k,t}: Each\; agent's\;debt(DAI)\;at\;time\;t\\
+\cdot \lambda: Overcollateralization\; ratio\\
 $$
+
+MakerDao 프로토콜이 안정성을 유지하기 위해서는 $M_{t}$의 값이 0보다 커야하며 이 값이 0보다 작아질 경우 프로토콜에 의한 강제 청산이 이뤄지게 된다. 
+
+<br>
+  
+## 2. Collateral Margin의 계산과 시뮬레이션
+
+앞서 정의한 Collateral Margin을 실제로 계산해보고 이전 포스트에서 다룬 이더리움과 메이커의 가격경로를 이용해 collateral Margin을 시뮬레이션해본다.    
+<br>
+
+
 
 (1) 수식은 짧은 시간 간격 동안의 자산가격 변화가 짧은 시간 간격(dt) 동안의 평균적인 수익률(drift)과 랜덤한 충격에 의한 변동분의 합으로 나타남을 의미한다.
 

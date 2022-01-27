@@ -1,27 +1,27 @@
 ---
-title:  "Geometric Brownian Motion 시뮬레이션(이더리움(ETH)에 대해)"
-excerpt: "Geometric Brownian Motion 시리즈 2"
+title:  "Correlated Geometric Brownian Motion 시뮬레이션(이더리움(ETH), Maker(MKR)에 대해)"
+excerpt: "The decentralized financial crisis_Imperial college of London 논문 replication 시리즈3"
 
 categories:
   - 프로젝트
 tags:
-  - brownian motion
+  - defi financial crisis
   - 이더리움
   - simulation
-  - 파이썬
+  - collateral margin
 
 use_math: true
 comments: true
 
-last_modified_at: 2022-01-04T08:06:00-05:00
+last_modified_at: 2022-01-28T08:06:00-05:00
 ---
 
-이번 포스트에서는 Geometric Brownian Motion을 이용하여 이더리움의 미래 가격경로에 대한 시뮬레이션을 수행해본다.  
+이번 포스트에서는 지난 포스트의 Geometric Brownian Motion을 확장하여 이더리움(ETH)과 메이커(MKR) 간 상관관계를 고려한 두 자산의 미래 가격경로에 대한 시뮬레이션을 수행해본다.  
 
 
-## 1. Geometric Browniam Motion    
+## 1. Correlated Geometric Browniam Motion    
 
-우선 Geometric Brownian Motion의 수식은 아래와 같다.
+지난 포스트에서는 하나의 자산에 대해 Geometric Brownian Motion을 이용하여 미래 가격경로에 대한 시뮬레이션을 수행했다. 그런데 현실적으로 여러개의 자산 우선 Geometric Brownian Motion의 수식은 아래와 같다.
 
 $$
 \textit{ds} = \mu S\textit{dt}+\sigma S\textit{dW}\;\;\;(1)\\
