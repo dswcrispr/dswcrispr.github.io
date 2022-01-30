@@ -1,5 +1,5 @@
 ---
-title:  "MakerDao 프로토콜에서의 Collateral Margin 계산과 시뮬레이션(이더리움(ETH), Maker(MKR)에 대해)"
+title:  "MakerDao 프로토콜에서의 Collateral Margin 계산 및 시뮬레이션"
 excerpt: "The decentralized financial crisis_Imperial college of London 논문 replication 시리즈3"
 
 categories:

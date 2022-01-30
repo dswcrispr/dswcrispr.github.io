@@ -1,6 +1,6 @@
 ---
-title:  "Geometric Brownian Motion 시뮬레이션(이더리움(ETH)에 대해)"
-excerpt: "Geometric Brownian Motion 시리즈 2"
+title:  "이더리움(ETH) 가격에 대한 Geometric Brownian Motion 시뮬레이션"
+excerpt: "The decentralized financial crisis_Imperial college of London 논문 replication 시리즈1"
 
 categories:
   - 프로젝트

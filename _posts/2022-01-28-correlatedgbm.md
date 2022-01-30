@@ -1,14 +1,14 @@
 ---
 title:  "Correlated Geometric Brownian Motion 시뮬레이션(이더리움(ETH), Maker(MKR)에 대해)"
-excerpt: "The decentralized financial crisis_Imperial college of London 논문 replication 시리즈3"
+excerpt: "The decentralized financial crisis_Imperial college of London 논문 replication 시리즈2"
 
 categories:
   - 프로젝트
 tags:
   - defi financial crisis
-  - 이더리움
+  - MakerDao
   - simulation
-  - collateral margin
+  - correlated Geometric Brownian Motion
 
 use_math: true
 comments: true
