@@ -17,7 +17,7 @@ last_modified_at: 2022-01-28T08:06:00-05:00
 ---
 
 이번 포스트에서는 지난 포스트의 Correlated Geometric Brownian Motion을 기반으로 MakerDao Defi 프로토콜에서의 Collateral Margin을 계산해보고 이더리움(ETH)과 메이커(MKR)의 가격경로에 따른 Margin 시뮬레이션을 수행해본다.
-이는 Imperial College of London의 2020년 논문 "The decentralized financial crisis" 논문의 replication임을 밝혀둔다.  
+
 
 
 ## 1. Collateral Margin 개요    

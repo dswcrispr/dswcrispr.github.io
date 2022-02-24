@@ -16,7 +16,9 @@ comments: true
 last_modified_at: 2022-01-04T08:06:00-05:00
 ---
 
-이번 포스트에서는 Geometric Brownian Motion을 이용하여 이더리움의 미래 가격경로에 대한 시뮬레이션을 수행해본다.  
+앞으로 몇 차례 포스트에 걸쳐 Imperial College of London의 2020년 논문 "The decentralized financial crisis" 에 나온 내용을 replication 해본다. 
+
+이번 포스트에서는 우선 Geometric Brownian Motion을 이용하여 이더리움의 미래 가격경로를 시뮬레이션 해본다.   
 
 
 ## 1. Geometric Browniam Motion    
