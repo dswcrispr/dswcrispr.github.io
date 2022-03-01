@@ -1,21 +1,19 @@
 ---
-title:  "Maker 프로토콜의 주요 내용"
-excerpt: "White Paper 정리"
+title:  "'Decentralized Stablecoins and Collateral Risk' 논문 주요 내용"
+excerpt: "논문 내용 정리 정리"
 
 categories:
   - Fintech_Blockchain
 tags:
   - MakerDao
-  - DeFi
+  - stablecoin
   - Dai
 last_modified_at: 2022-02-23T08:06:00-05:00
 ---
 
- 이번 포스트에서는 암호자산 담보 Stablecoin의 대표적인 예시인 Dai의 시스템인 Maker 프로토콜에 대해서 설명한다. MakerDao의 홈페이지에 게시된 [whitepaper](https://makerdao.com/en/whitepaper/)및 whitepaper 발간 이후에 진행된 업데이트 내용들을 요약 및 정리하여 프로토콜의 작동원리, Dai stablecoin의 개념, 가격 유지 매커니즘, 가격안정화 메커니즘의 작동여부 등에 대해 알아볼 것이다.
+ 이번 포스트에서는 2021.9.1일 Warwick Business School의 Roman Kozhan, Ganesh Viswanath-Natraj가 발표한 ['Decentralized Stablecoins and Collateral Risk'](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3866975) 논문의 주요내용을 간략하게 정리해본다.   
 
- 동 포스트를 작성하는 과정에서 MakerDao의 whitepaper 뿐만 아니라 서울대학교의 블록체인 학회 Decipher 블로그의 아래와 같은 포스트를 많이 참조하였다.
- - [[스테이블코인 시리즈]제2편 메이커다오(MakerDAO), 가격 안정성을 다오!_Decipher](https://medium.com/decipher-media/makerdao-a-to-z-9629c7e9ddc7)
-  - [과담보 스테이블코인과 SoundMoney: MakerDao 분석_Decipher](https://medium.com/decipher-media/%EA%B3%BC%EB%8B%B4%EB%B3%B4-%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94%EC%BD%94%EC%9D%B8%EA%B3%BC-sound-money-makerdao-%EB%B6%84%EC%84%9D-2699d52d1f7d)
+ 해당 논문은 MakerDao의 stablecoin인 Dai의 가격 안정성 메커니즘을 다루고 있다. Dai의 가격이 ETH와 같이 변동성이 큰 담보자산 수익률과 음의 상관관계를 갖고 있음을 밝히고, USDC와 같은 비교적 안정적인 담보자산의 Maker protocol내 도입이 Dai 가격의 안정성을 높였음을 실증적으로 분석한다.
 
 ## 1. Maker protocol 소개    
 
