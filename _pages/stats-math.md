@@ -1,6 +1,6 @@
 ---
 title: "Math, Statistics"
-permalink: /categories/Math_Statistics/
+permalink: /categories/math_stats/
 layout: category
 author_profile: true
 taxonomy: Math/Statistics

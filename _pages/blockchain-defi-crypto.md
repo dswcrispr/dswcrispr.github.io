@@ -1,6 +1,6 @@
 ---
 title: "Blockchain, DeFi, Fintech"
-permalink: /categories/Fintech_Blockchain/
+permalink: /categories/blockchain/
 layout: category
 author_profile: true
 taxonomy: Blockchain/DeFi
