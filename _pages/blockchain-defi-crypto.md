@@ -1,9 +1,9 @@
 ---
-title: "Fintech, Blockchain"
+title: "Blockchain, DeFi, Fintech"
 permalink: /categories/Fintech_Blockchain/
 layout: category
 author_profile: true
-taxonomy: Fintech_Blockchain
+taxonomy: Blockchain/DeFi
 ---
 
-Blockchain, Fintech, CryptoAssets, DeFi 관련 내용을 기록합니다.
+Blockchain, DeFi, CryptoAssets, Fintech 관련 내용
