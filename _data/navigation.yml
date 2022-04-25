@@ -2,14 +2,14 @@
 main:
   - title: "프로젝트"
     url: /categories/프로젝트/
+  - title: "Math/Statistics"
+    url: /categories/math_stats/
   - title: "Finance"
     url: /categories/finance/
-  - title: "Fintech_Blockchain"
-    url: /categories/Fintech_Blockchain/
+  - title: "Blockchain/DeFi"
+    url: /categories/blockchain/
   - title: "Categories"
     url: /categories/
-  - title: "About"
-    url: /about/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
