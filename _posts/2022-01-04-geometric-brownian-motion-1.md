@@ -1,6 +1,6 @@
 ---
 title:  "이더리움(ETH) 가격에 대한 Geometric Brownian Motion 시뮬레이션"
-excerpt: "The decentralized financial crisis_Imperial college of London 논문 replication 시리즈1"
+excerpt: "The decentralized financial crisis_Imperial college of London 논문 replication"
 
 categories:
   - 프로젝트
