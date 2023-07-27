@@ -27,11 +27,12 @@ last_modified_at: 2023-07-27T08:06:00-05:00
 아래에서는 Newton's method의 개념을 1변수(single variable) 함수의 solution을 찾는 과정부터 다변수(multi variables)함수의 solution을 찾는 과정에 걸쳐 정리해본다.
 
 
-## 1. 1변수 함수 f(x) = 0의 해를 찾는 과정    
+## 1. 단일변수 함수 f(x) = 0의 해를 찾는 과정    
 
 아래 그림과 같은 함수 f(x)에 대해 f(x) = 0을 만족하는 x값 solution을 구한다고 생각하자.
 
 ![](https://github.com/dswcrispr/dswcrispr.github.io/blob/master/assets/images/newton_method/newton method.jpg?raw=true)
+<br>
 (출처: Thomas' Calculus 12E)
 
 계산을 매우 잘하는 컴퓨터가 있다면 x에 무수히 많은 값을 넣어보고 함수값이 0에 제일 가까운 x를 solution이라고 제시할 것이다. 근데 함수가 매우 복잡한 형태를 갖고 있다면?? 혹은 좀 더 체계적인 방법으로 solution을 찾아 나갈 수는 없을까?? 하는 생각이 든다.
@@ -42,6 +43,8 @@ last_modified_at: 2023-07-27T08:06:00-05:00
 (1) 초기값 $x_{0}$에 대해 f($x_{0}$)을 계산해본다. 당연히 임의의 $x_{0}$에 대해 f($x_{0}$)값은 높은 확률로 0과 다를 것이다.
 
 (2) 위의 그림에서처럼 ($x_{0}$, f($x_{0}$))을 지나면서 f(x)에 접하는 접선을 구하고 이 접선이 x축과 만나는 절편을 $x_{1}$로 두자.
+
+위의 접선은 y = f($x_{0}$) + f'(x)(x - $x_{0}$) 로 표현할 수 있고 이 접선의 해, 즉 x절편은 $x_{1}$ = $x_{0}$ - frac{f($x_{0}$)}{f'($x_{0}$)} 와 같다.
 
 
 
