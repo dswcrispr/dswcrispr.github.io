@@ -33,6 +33,14 @@ last_modified_at: 2023-07-27T08:06:00-05:00
 
 ![](https://github.com/dswcrispr/dswcrispr.github.io/blob/master/assets/images/newton_method/newton_method.jpg?raw=true)
 
+계산을 매우 잘하는 컴퓨터가 있다면 x에 무수히 많은 값을 넣어보고 함수값이 0에 제일 가까운 x를 solution이라고 제시할 것이다. 근데 함수가 매우 복잡한 형태를 갖고 있다면?? 혹은 좀 더 체계적인 방법으로 solution을 찾아 나갈 수는 없을까?? 하는 생각이 든다.
+
+이에 대해 아래와 같은 과정을 생각해 볼 수 있다.
+
+
+(1) 초기값 $x_{0}$에 대해 $f
+
+
 
 
 $x_{1}$, $x_{2}$ ... 와 같은 확률변수가 $\textit{iid}$ 이고, $x_{i}$의 평균이 유한하다고 가정할 때, 대수의 법칙을 한문장으로 표현하면 **'표본의 평균(sample mean)은 모집단 평균(population mean)에 확률적으로 수렴한다.'**와 같다.
