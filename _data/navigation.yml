@@ -8,6 +8,8 @@ main:
     url: /categories/finance/
   - title: "Blockchain/DeFi"
     url: /categories/blockchain/
+  - title: "Books"
+    url: /categories/books/  
   - title: "Categories"
     url: /categories/
   # - title: "Sample Collections"
