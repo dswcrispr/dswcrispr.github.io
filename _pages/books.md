@@ -1,6 +1,6 @@
 ---
 title: "독서, 책"
-permalink: /categories/readings/
+permalink: /categories/books/
 layout: category
 author_profile: true
 taxonomy: Books
