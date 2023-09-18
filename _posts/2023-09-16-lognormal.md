@@ -25,7 +25,7 @@ $$
 logX_{t} = logX_{t-1} + \epsilon_{t}
 $$
 
-_여기서 $\epsilon_{t}$는 CLT(central limit theroem)에 의하여 평균이 0인 정규본포를 따른다고 하자. $X_0$ = C(상수)라고 할때, $X_{t}$의 점근적 분포는 어떻게 되는가?_
+_여기서 $\epsilon_{t}$는 CLT(central limit theroem)에 의하여 평균이 0인 정규본포를 따른다고 하자. $X_0 = C$(상수)라고 할때, $X_{t}$의 점근적 분포는 어떻게 되는가?_
 
 ### (1) 문제풀이
 
@@ -120,7 +120,7 @@ $$
 
 이처럼 log-normal 분포는 주식가격처럼 항상 양수를 갖는 확률변수를 모델링할 때 활용할 수 있다.
 
-### (3) python을 통한 simulation
+### (4) python을 통한 simulation
 
 이제 아래에서는 python을 이용해서 위 문제의 수식으로부터 생성되는 $logX_T$, $X_T$가 각각 normal, log-normal 분포를 따르는지 simulation으로 확인해보고자 한다.
 
@@ -200,11 +200,24 @@ sample3.plotting()
 
 각각의 simulation에서 구한 histogram은 아래와 같다.
 
-![](https://github.com/dswcrispr/dswcrispr.github.io/blob/master/assets/images/lognormal/lognormal_500.png?raw=true)
-(그림1. N = 500)<br>
+![](https://github.com/dswcrispr/dswcrispr.github.io/blob/master/assets/images/lognormal/lognormal_500.png?raw=true)<br>
+(그림1. N = 500, 각각 왼쪽이 $logX_T$, 오른쪽이 $X_T$)
 
-![](https://github.com/dswcrispr/dswcrispr.github.io/blob/master/assets/images/lognormal/lognormal_1000.png?raw=true)
-(그림2. N = 1,000)<br>
+![](https://github.com/dswcrispr/dswcrispr.github.io/blob/master/assets/images/lognormal/lognormal_1000.png?raw=true)<br>
+(그림2. N = 1,000)
 
-![](https://github.com/dswcrispr/dswcrispr.github.io/blob/master/assets/images/lognormal/lognormal_3000.png?raw=true)
-(그림3. N = 3,000)<br>
+![](https://github.com/dswcrispr/dswcrispr.github.io/blob/master/assets/images/lognormal/lognormal_3000.png?raw=true)<br>
+(그림3. N = 3,000)
+
+위 히스토그램들에서 볼 수 있듯이 표본수인 N이 커질 수록 $logX_T$와 $X_T$의 히스토램이 각각 normal, log-normal 분포의 pdf와 닮아가는 것을 볼 수 있다. 또한 추출한 $logX_T$와 $X_T$의 표본으로부터 얻은 평균과 표준편차가 각각 위에서 정리한 분포의 평균, 표준편차에 근접한 값이 나옴을 아래와 같이 확인가능하다. 
+
+```python
+# N=3000일때 logX_T, X_T의 평균 및 분산
+>>> sample3 = log_normal(40, 0.02, 500, 3000)
+>>> sample3.logX_T_collector()
+>>> np.mean(sample3.logX_Ts)
+3.685818842465808  # log(40)인 3.6887과 유사
+
+>>> np.std(sample3.logX_Ts)
+0.4572085112864432  # sqrt(500)*sigma(0.02)인 0.44721과 유사  
+```
