@@ -39,10 +39,10 @@ $$
 + logX_3 - logX_2 = \epsilon_3 \\
 .....\\ 
 \\
-+logX_t - logX_{t-1} = \epsilon_t \\
++logX_t - logX_{t-1} = \epsilon_t \end{align*}\\
 
-logX_t = logX_{0} + \epsilon_0 + \epsilon_1 + ... \epsilon_t \end{align*} \\
-logX_t = logX_{0} + \sum_{i=1}^t\epsilon_i 
+\begin{align*} logX_t = logX_{0} + \epsilon_0 + \epsilon_1 + ... \epsilon_t  \\
+logX_t = logX_{0} + \sum_{i=1}^t\epsilon_i \end{align*}
 $$
 
 문제에서 주어진 $X_{0} = c$, $\epsilon_t ~ N(0, \sigma^2)$ 등의 조건을 활용하면 $logX_t$는 평균이 $logc$,분산이 $t\sigma^2$인 정규분포를 따름을 알 수 있다.(정규분포를 따르는 확률변수의 합은 정규분포를 따르므로)
