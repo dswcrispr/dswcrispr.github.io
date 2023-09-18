@@ -25,7 +25,7 @@ $$
 logX_{t} = logX_{t-1} + \epsilon_{t}
 $$
 
-_여기서 $\epsilon_{t}$는 CLT(central limit theroem)에 의하여 평균이 0인 정규본포를 따른다고 하자. $X_0 = C$(상수)라고 할때, $X_{t}$의 점근적 분포는 어떻게 되는가?_
+여기서 $\epsilon_{t}$는 CLT(central limit theroem)에 의하여 평균이 0인 정규본포를 따른다고 하자. $X_0 = C$(상수)라고 할때, $X_{t}$의 점근적 분포는 어떻게 되는가?
 
 ### (1) 문제풀이
 
