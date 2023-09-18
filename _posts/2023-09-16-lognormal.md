@@ -1,5 +1,5 @@
 ---
-title:  "log-normal 분포"
+title:  "log-normal 분포의 성질과 시뮬레이션"
 excerpt: "log-normal 분포 예시, 시뮬레이션"
 
 categories:
