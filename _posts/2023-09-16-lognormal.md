@@ -62,19 +62,17 @@ $$
 log-normal 분포를 따르는 확률변수 $X$의 pdf(probability density function, 확률밀도함수)는 다음과 같이 유도할 수 있다. 
 
 $$
-\begin{align*} & Y = logX \sim N(\mu, \sigma^2)\\ &
+\begin{align*} Y & = logX \sim N(\mu, \sigma^2)\\ 
 
-F_X(X) = P(X \leq x) = P(e^y \leq x) = P(Y \leq logx) = F_Y(logx) = F_Y(y) \end{align*}
+F_X(X) & = P(X \leq x) = P(e^y \leq x) = P(Y \leq logx) = F_Y(logx) = F_Y(y) \end{align*}
 $$
 
-\text{위로부터} f_X(x) = f_Y(y) \frac{\partial{y}}{\partial{x}} \text{를 통해 X의 pdf를 구할 수 있다.}
+위로부터 $f_X(x) = f_Y(y)\frac{\partial{y}}{\partial{x}}$ 를 통해 X의 pdf를 아래처럼 구할 수 있다.
 
-f_Y(y) = \frac{1}{\sigma\sqrt{2\pi}}exp(-\frac{(logx-\mu)^2}{2\sigma^2}) \\
-\frac{\partial{y}}{\partial{x}} = \frac{1}{x}
+$$
+f_X(x) = \frac{1}{\sigma\sqrt{2\pi}}exp(-\frac{(logx-\mu)^2}{2\sigma^2})\frac{1}{x} \\
 
-
-
-
+(\because \frac{\partial{y}}{\partial{x}} = \frac{1}{x})
 $$
 
 
