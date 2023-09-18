@@ -124,4 +124,87 @@ $$
 
 이제 아래에서는 python을 이용해서 위 문제의 수식으로부터 생성되는 $logX_T$, $X_T$가 각각 normal, log-normal 분포를 따르는지 simulation으로 확인해보고자 한다.
 
-  $X_0$의 초기값 c와 $\epsilon$의 표준편차인 $\sigma$에 특정한 값을 주고 $logX_t$가 실제로 정규분포를 따르는지 python을 통한 simulation으로 확인해보고자 한다. 
+이를 위해 다음과 같이 $X_0$, $\sigma$, T, N(표본수) 등이 주어졌을 때 $logX_T$ 및 $X_T$를 계산하는 'log-normal'이라는 class를 정의한다.
+
+```python
+# Module import
+import numpy as np
+import matplotlib.pyplot as plt
+import sseaborn as sns
+plt.rcParams['figure.figsize'] = (10, 6)
+
+class log_normal:
+  
+      def __init__(self, x0, sigma, T, N):
+        self.logx0 = np.log(x0) # 초기값 x0
+        self.sigma = sigma # sigma 초기값
+        self.T = T 
+        self.N = N # 표본수
+        self.epsilon = None 
+        self.logX_t = None
+        self.logX = None
+        self.logX_Ts = [] 
+        self.X_Ts = []
+
+    # X_T, logX_T를 저장할 list 초기화 method    
+    def _init_X0(self):
+        self.logX_t = self.logx0
+        self.logX = [self.logx0]
+
+    # epsilon 초기화    
+    def _init_epsilon(self):
+        self.epsilon = np.random.normal(0, self.sigma, self.T - 1)
+
+    # logXt 계산    
+    def _logXt_calculator(self):
+        self._init_X0()
+        self._init_epsilon()
+        for i in range(self.T - 1):
+            self.logX_t += self.epsilon[i]
+            self.logX.append(self.logX_t)
+
+    # 계산된 X_T, logX_T를 저장하는 list         
+    def logX_T_collector(self):
+        for i in range(self.N):
+            self._logXt_calculator()
+            self.logX_Ts.append(self.logX_t)
+            self.X_Ts.append(np.exp(self.logX_t))
+
+    # histogram plotting        
+    def plotting(self):
+        fig, ax = plt.subplots(ncols = 2)
+        plt.ylim(0, 0.03)
+        sns.histplot(self.logX_Ts, kde = True, stat = 'density', ax = ax[0])
+        sns.histplot(self.X_Ts, kde = True, stat = 'density', ax = ax[1])
+        plt.show
+```
+
+위에서 정의한 class를 이용해서 문제에서의 수식으로부터 계산한 $X_T$의 표본수가 충분히 클 때 $logX_T$와 $X_T$ 값들의 히스토그램을 그려본다.   
+
+X의 초기값으로는 40, $epsilon$의 표준편차는 0.02, T=500 으로 설정하고 표본수를 각각 500, 1000, 3000으로 늘려본다.
+
+```python
+# 인스턴스 생성 및 plotting
+sample1 = log_normal(40, 0.02, 500, 500)
+sample1.lotX_T_collector()
+sample1.plotting()
+
+sample2 = log_normal(40, 0.02, 500, 1000)
+sample2.lotX_T_collector()
+sample2.plotting()
+
+sample3 = log_normal(40, 0.02, 500, 3000)
+sample3.lotX_T_collector()
+sample3.plotting()
+```
+
+각각의 simulation에서 구한 histogram은 아래와 같다.
+
+![](https://github.com/dswcrispr/dswcrispr.github.io/blob/master/assets/images/lognormal/lognormal_500.png?raw=true)
+(그림1. N = 500)<br>
+
+![](https://github.com/dswcrispr/dswcrispr.github.io/blob/master/assets/images/lognormal/lognormal_1000.png?raw=true)
+(그림2. N = 1,000)<br>
+
+![](https://github.com/dswcrispr/dswcrispr.github.io/blob/master/assets/images/lognormal/lognormal_3000.png?raw=true)
+(그림3. N = 3,000)<br>
