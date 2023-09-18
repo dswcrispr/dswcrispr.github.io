@@ -31,7 +31,7 @@ _여기서 $\epsilon_{t}$는 CLT(central limit theroem)에 의하여 평균이 0
 
 위 문제에 주어진 식은 $X_{t}$에 log가 취해진 것을 제외하면 일반적인 random walk의 표현식인 $X_{t} = X_{t-1} + \epsilon_{t}$과 유사한 형태이다. 
 
-우선 아래와 같이 축차대입법을 통해 $logX_{t}$를 구할 수 있고, $logX_t$는 초기값 $logX_{0}$과 $\epsilon_i$값들의 합으로 표현가능함을 알 수 있다.
+우선 아래와 같이 축차대입법을 통해 $logX_{t}$를 구할 수 있고, **$logX_t$는 초기값 $logX_{0}$과 $\epsilon_i$값들의 합으로 표현가능**함을 알 수 있다.
 
 $$
 \begin{align*} logX_1 - logX_0 = \epsilon_1 \\
@@ -105,11 +105,12 @@ $Var(X) = exp(2\mu+\sigma^2)\cdot (exp(\sigma^2) - 1)$
 
 $$
 \begin{align*} log\frac{P_t}{P_{t-1}} & = log(1+r_t) \approx r_t \\
+\\
 logP_t - logP_{t-1} & \approx r_t
 \end{align*}
 $$
 
-만약 주식 수익률 $r_t$가 평균이 0인 정규분포를 따른다면 위 식은 포스팅 서두에 등장한 모 대학원 기출문제와 동일한 구조를 가짐을 알 수 있다. 이를 통해 T시점의 주식가격의 로그값은 아래와 같이 최초 주식가격의 로그값에 해당 시점까지의 수익률을 누적해서 더한 값으로 근사해서 표현할 수 있다.  
+만약 주식 수익률 $r_t$가 **평균이 0인 정규분포를 따른다면 위 식은 포스팅 서두에 등장한 모 대학원 기출문제와 동일한 구조**를 가짐을 알 수 있다. 이를 통해 **T시점의 주식가격의 로그값은 아래와 같이 최초 주식가격의 로그값에 해당 시점까지의 수익률을 누적해서 더한 값으로 근사**해서 표현할 수 있다.  
 
 $$
 logP_T = logP_0 +  \sum_{i=1}^Tr_i
@@ -121,4 +122,6 @@ $$
 
 ### (3) python을 통한 simulation
 
-이제 아래에서는 $X_0$의 초기값 c와 $\epsilon$의 표준편차인 $\sigma$에 특정한 값을 주고 $logX_t$가 실제로 정규분포를 따르는지 python을 통한 simulation으로 확인해보고자 한다. 
+이제 아래에서는 python을 이용해서 위 문제의 수식으로부터 생성되는 $logX_T$, $X_T$가 각각 normal, log-normal 분포를 따르는지 simulation으로 확인해보고자 한다.
+
+  $X_0$의 초기값 c와 $\epsilon$의 표준편차인 $\sigma$에 특정한 값을 주고 $logX_t$가 실제로 정규분포를 따르는지 python을 통한 simulation으로 확인해보고자 한다. 
