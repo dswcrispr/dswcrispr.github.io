@@ -61,7 +61,7 @@ $$
 
 log-normal 분포를 따르는 확률변수 $X$의 pdf(probability density function, 확률밀도함수)는 다음과 같이 유도할 수 있다. 
 
-$$ Y = logX \sim N(\mu, \sigma^2)에서 X의\ cdf(cummulative\ density\ function)을\ 아래와\ 같이\ 표현\ 가능\\
+$$ Y = logX \sim N(\mu, \sigma^2)\text{에서 X의 cdf(cummulative\ density\ function)을 아래와 같이 표현 가능}\\
 \\
 F_X(X) = P(X \leq x) = P(e^y \leq x) = P(Y \leq logx)\\
 
