@@ -89,5 +89,9 @@ $$
 \end{align*}
 $$
 
+#### log-normal 분포의 분산
+
+log-normal 분포의 분산 또한 기대값과 유사하게 구할 수 있는데, 계산과정은 생략하고 여기에서는 결과만 남겨둔다.<br>
+$Var(X) = e^(2\mu+\sigma^2)(e^(\sigma^2) - 1)$
 
 이제 아래에서는 $X_0$의 초기값 c와 $\epsilon$의 표준편차인 $\sigma$에 특정한 값을 주고 $logX_t$가 실제로 정규분포를 따르는지 python을 통한 simulation으로 확인해보고자 한다. 
