@@ -40,7 +40,8 @@ $$
 .....\\ 
 \\
 +logX_t - logX_{t-1} = \epsilon_t \end{align*}\\
-
+$$
+$$
 \begin{align*} logX_t = logX_{0} + \epsilon_0 + \epsilon_1 + ... \epsilon_t  \\
 logX_t = logX_{0} + \sum_{i=1}^t\epsilon_i \end{align*}
 $$
