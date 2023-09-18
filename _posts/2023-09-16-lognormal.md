@@ -64,7 +64,7 @@ log-normal 분포를 따르는 확률변수 $X$의 pdf(probability density funct
 $$
 \begin{align*} Y & = logX \sim N(\mu, \sigma^2)\\ 
 
-F_X(X) & = P(X \leq x) = P(e^y \leq x) = P(Y \leq logx) = F_Y(logx) = F_Y(y) \end{align*}
+F_X(x) & = P(X \leq x) = P(e^y \leq x) = P(Y \leq logx) = F_Y(logx) = F_Y(y) \end{align*}
 $$
 
 위로부터 $f_X(x) = f_Y(y)\frac{\partial{y}}{\partial{x}}$ 를 통해 X의 pdf를 아래처럼 구할 수 있다.
@@ -75,7 +75,19 @@ f_X(x) = \frac{1}{\sigma\sqrt{2\pi}}exp(-\frac{(logx-\mu)^2}{2\sigma^2})\frac{1}
 (\because \frac{\partial{y}}{\partial{x}} = \frac{1}{x})
 $$
 
+#### log-normal 분포의 기대값
 
+log-normal 분포의 기대값은 $E(X) = \int^\infty_{-\infty}{x f(x)dx}$을 통해 계산가능하다. 다만 약간의 기술적인 수식변형이 들어가니 이에 유의하여 계산하면 아래와 같다.
+
+$$
+\begin{align*} E(X) & = \int^\infty_{0}{\frac{1}{\sigma\sqrt{2\pi}}exp(-\frac{(logx-\mu)^2}{2\sigma^2})\frac{1}{x}\cdot xdx} \\
+& = \int^\infty_{-\infty}{\frac{1}{\sigma\sqrt{2\pi}}exp(-\frac{(t-\mu)^2}{2\sigma^2})\cdot exp(t)dt},\; (\because logx = t, dx = exp(t)dt) \\
+& = \int^\infty_{-\infty}{\frac{1}{\sigma\sqrt{2\pi}}exp(-\frac{(t-\mu)^2 + 2\sigma^2t}{2\sigma^2})dt} \\
+& = \int^\infty_{-\infty}{\frac{1}{\sigma\sqrt{2\pi}}exp(-\frac{(t-(\mu+\sigma^2))^2}{2\sigma^2} +\mu+ \frac{1}{2}\sigma^2)dt} \\
+& = exp(\mu+\frac{1}{2}\sigma^2)\; (\because \int^\infty_{-\infty}{\frac{1}{\sigma\sqrt{2\pi}}exp(-\frac{(t-(\mu+\sigma^2))^2}{2\sigma^2})dt} = 1)\\
+
+\end{align*}
+$$
 
 
 이제 아래에서는 $X_0$의 초기값 c와 $\epsilon$의 표준편차인 $\sigma$에 특정한 값을 주고 $logX_t$가 실제로 정규분포를 따르는지 python을 통한 simulation으로 확인해보고자 한다. 
