@@ -3,7 +3,7 @@ title:  "이더리움(ETH) 가격에 대한 Geometric Brownian Motion 시뮬레�
 excerpt: "The decentralized financial crisis_Imperial college of London 논문 replication"
 
 categories:
-  - 프로젝트
+  - Blockchain/DeFi
 tags:
   - brownian motion
   - 이더리움
