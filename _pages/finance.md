@@ -1,5 +1,5 @@
 ---
-title: "금융시장, 재무 관련 기록 "
+title: "금융시장, 재무 관련 기록"
 permalink: /categories/finance/
 layout: category
 author_profile: true
